@@ -1,5 +1,17 @@
 function minDate(dates) {
   //write you code here
+	let date=new Date(dates[0]);
+	let days=date.getTime();
+	let j=0;
+	for(let i=0;i<dates.length;i++){
+		let tempDate=new Date(dates[0]);
+		let tempDays=date.getTime();
+		if(tempDays<days){
+			days=tempDays;
+			j=i;
+		}
+	}
+	return dates[j];
 }
 
 // Do not change the code
